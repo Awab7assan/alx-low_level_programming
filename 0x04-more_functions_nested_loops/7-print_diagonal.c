@@ -3,26 +3,27 @@
 /**
  * print_diagonal -  draws a diagonal line
  *
- * @n: is the number of times the character \
- *	should be printed
+ * @n: is the number of \\ to be printed
+ *
+ * Return: void
 */
 
 void print_diagonal(int n)
 {
-	int postn, space;
+	int i = 0, ii;
 
-	if (n <= 0)
-		_putchar('\n');
-	else
+	while (i < n && n > 0)
 	{
-		for (postn = 1; postn <= n; postn++)
+		ii = 0;
+		while (ii < i)
 		{
-			for (space = 1; spacea <= postn; space++)
-				_putchar(' ');
-			_putchar(92);/*is equal to '/' char*/
-			_putchar('\n');
+			_putchar(' ');
+			ii++;
 		}
+		_putchar('\\');
+		_putchar('\n');
+		i++;
 	}
+	if (i == 0)
+		_putchar('\n');
 }
-
-
